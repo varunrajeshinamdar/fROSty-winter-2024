@@ -30,7 +30,7 @@ This guide provides step-by-step instructions to install Docker and run a ROS co
 
 1. Open **Docker Desktop** after logging into your system.  
 2. In the bottom-right corner, open the **Docker Terminal**.  
-   (<img width="1372" alt="SCR-20241129-hdwg" src="https://github.com/user-attachments/assets/5f6891df-5274-4f3f-8b52-e6afcd59663d">)
+   <img width="1372" alt="SCR-20241129-hdwg" src="https://github.com/user-attachments/assets/5f6891df-5274-4f3f-8b52-e6afcd59663d">
 3. Run the following command to start the ROS Docker container:  
    ```bash
    docker run -p 6080:80 --security-opt seccomp=unconfined --shm-size=512m saravan29/ros_docker_final:final
@@ -39,7 +39,7 @@ This guide provides step-by-step instructions to install Docker and run a ROS co
 
 > **Note**: The first run may take some time to download necessary files and set up the environment.
 
-(<img width="784" alt="image" src="https://github.com/user-attachments/assets/e2b2b726-06e6-4ecd-a05e-138732fe72bd">)
+<img width="784" alt="image" src="https://github.com/user-attachments/assets/e2b2b726-06e6-4ecd-a05e-138732fe72bd">
 
 
 ### Step 4: Access ROS in the Browser  
@@ -67,8 +67,8 @@ This guide provides step-by-step instructions to install Docker and run a ROS co
 
 1. Open **Docker Desktop** after logging into your system.  
 2. In the bottom-right corner, open the **Docker Terminal**.  
-(<img width="1372" alt="SCR-20241129-hdwg" src="https://github.com/user-attachments/assets/5f6891df-5274-4f3f-8b52-e6afcd59663d">)
-]
+<img width="1372" alt="SCR-20241129-hdwg" src="https://github.com/user-attachments/assets/5f6891df-5274-4f3f-8b52-e6afcd59663d">
+
 3. Run the following command to start the ROS Docker container:  
    ```bash
    docker run -p 6080:80 --security-opt seccomp=unconfined --shm-size=512m saravan29/ros_docker_final:final
@@ -77,7 +77,7 @@ This guide provides step-by-step instructions to install Docker and run a ROS co
 
 > **Note**: The first run may take some time to download necessary files and set up the environment.
 
-(<img width="784" alt="image" src="https://github.com/user-attachments/assets/e2b2b726-06e6-4ecd-a05e-138732fe72bd">)
+<img width="784" alt="image" src="https://github.com/user-attachments/assets/e2b2b726-06e6-4ecd-a05e-138732fe72bd">
 
 
 
@@ -120,7 +120,7 @@ This guide provides step-by-step instructions to install Docker and run a ROS co
 
 > **Note**: The first run may take some time to download necessary files and set up the environment.
 
-(<img width="784" alt="image" src="https://github.com/user-attachments/assets/e2b2b726-06e6-4ecd-a05e-138732fe72bd">)
+<img width="784" alt="image" src="https://github.com/user-attachments/assets/e2b2b726-06e6-4ecd-a05e-138732fe72bd">
 
 
 ### Step 4: Access ROS in the Browser  
