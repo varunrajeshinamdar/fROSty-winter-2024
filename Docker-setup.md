@@ -37,7 +37,10 @@ This guide provides step-by-step instructions to install Docker and run a ROS co
    ```
 4. Wait for the container to initialize. This may take around 30 minutes for first-time users.  
 
-> **Note**: The first run may take some time to download necessary files and set up the environment.  
+> **Note**: The first run may take some time to download necessary files and set up the environment.
+
+![Output will be this][<img width="784" alt="image" src="https://github.com/user-attachments/assets/e2b2b726-06e6-4ecd-a05e-138732fe72bd">
+]
 
 ### Step 4: Access ROS in the Browser  
 
@@ -72,7 +75,11 @@ This guide provides step-by-step instructions to install Docker and run a ROS co
    ```
 4. Wait for the container to initialize. This may take around 30 minutes for first-time users.  
 
-> **Note**: The first run may take some time to download necessary files and set up the environment.  
+> **Note**: The first run may take some time to download necessary files and set up the environment.
+
+![Output will be this][<img width="784" alt="image" src="https://github.com/user-attachments/assets/e2b2b726-06e6-4ecd-a05e-138732fe72bd">
+]
+
 
 ### Step 4: Access ROS in the Browser  
 
@@ -111,7 +118,11 @@ This guide provides step-by-step instructions to install Docker and run a ROS co
    ```
 3. Wait for the container to initialize. This may take around 30 minutes for first-time users.  
 
-> **Note**: The first run may take some time to download necessary files and set up the environment.  
+> **Note**: The first run may take some time to download necessary files and set up the environment.
+
+![Output will be this][<img width="784" alt="image" src="https://github.com/user-attachments/assets/e2b2b726-06e6-4ecd-a05e-138732fe72bd">
+]
+
 
 ### Step 4: Access ROS in the Browser  
 
