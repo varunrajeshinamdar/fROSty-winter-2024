@@ -96,7 +96,7 @@ This guide provides step-by-step instructions to install Docker and run a ROS co
 > sudo apt install gnome-terminal
 > ```
 
-### Step 1: Install Docker Desktop  
+### Step 1: Download Docker Desktop  
 
 1. Download the `.deb` file for Ubuntu from the [Docker installation page](https://docs.docker.com/desktop/setup/install/linux/ubuntu/).  
 
