@@ -64,6 +64,8 @@ This guide provides step-by-step instructions to install Docker and run a ROS co
 
 1. Open **Docker Desktop** after logging into your system.  
 2. In the bottom-right corner, open the **Docker Terminal**.  
+![Docker terminal][<img width="1372" alt="SCR-20241129-hdwg" src="https://github.com/user-attachments/assets/5f6891df-5274-4f3f-8b52-e6afcd59663d">
+]
 3. Run the following command to start the ROS Docker container:  
    ```bash
    docker run -p 6080:80 --security-opt seccomp=unconfined --shm-size=512m saravan29/ros_docker_final:final
