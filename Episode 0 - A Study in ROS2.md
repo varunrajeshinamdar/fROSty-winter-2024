@@ -1,160 +1,67 @@
-# Episode 0 - A Study in ROS2
-
-## Introduction
-
-**ROS**, which means the Robot Operating System, is a set of software libraries and tools to help you build robot applications. It provides hardware abstraction, device drivers, libraries, visualizers, message-passing, package management, and more. The point of ROS is to create a **robotics standard**, so you don't need to reinvent the wheel anymore when building new robotic software.
-
-ROS 2 builds on the concepts of ROS 1, re-architected using modern middleware for improved efficiency, reliability and flexibility on a wider range of platforms including embedded devices. Key concepts in ROS 2 include:
-
-* Graph architecture - Nodes communicate via topics, services or actions to share data and commands
-* Real-time capabilities - Optimized for complex robotics use cases and real-time code
-* Expanding hardware support - Runs on embedded devices like Raspberry Pi, microcontrollers and FPGAs
-
-This tutorial will cover the core ROS 2 concepts including working with nodes, topics, services, parameters and more through practical examples using the ROS 2 Humble release.
-
-<img src="W0_Images/ros2.png " width=400 height=100>
-
-## Table of Contents:
-
-<ol>
-	<li> <a href="#Preliminary"> Preliminary Installation </a> </li>
-	<li> <a href="#Getting"> Getting started with ROS </a> </li>
-	<li> <a href="#PubSub">Publisher-Subscriber Interface </a></li>
-	<ol>
-		<li><a href="#Publisher"> Writing a simple Publisher Node </a></li>
-		<li><a href="#Subscriber"> Writing a simple Subscriber Node </a></li>
-	</ol>
-		
-</ol>
-
-
-## Preliminary Installation <a name="Preliminary"></a>
-**WARNING** - The following installation procedures can make you do stuff like this ...
-
-<img src="W0_Images/Sherlock_beating.gif" height=300> <img src="W0_Images/Sherlock_screaming.gif" height=300>
-
-or even worse.
-
-Refer to [FAQs](https://github.com/erciitb/frosty-winter-2023/blob/main/FAQs.md) for any issues or doubts regarding installation **first**.
-
-* __Ubuntu Installation__ :
-For using ROS2 framework, Ubuntu is not necessary, it can work on Mac and Windows also, but highly recommended. So, follow any of the five alternatives for setting up the linux environment:
-(It's Preferable that you install Ubuntu 22.04)<br />
-
-	**Dual-boot**: Follow this [Tutorial](https://www.tomshardware.com/how-to/dual-boot-linux-and-windows-11) or this [Video Tutorial](https://youtu.be/QKn5U2esuRk?si=RP5TieFTjEVU240-) to dual-boot Ubuntu with Windows. For MacOS, follow the procedure in this [video tutorial](https://youtu.be/jbUulXVZIBI?si=XTMyoI4yP6OC0Jc5) </li>
-<span style="color:red">[WARNING], Do at your own risk! We will be not responsible if you lose your data. __Follow instructions carefully and make backups before you start!__</span> <br />
-*For absolute beginners, we recommend going for any one of the three alternatives mentioned below unless you're sure you want to dual-boot. Dual-booting can be a little daunting. And you can always opt for dual-booting once you're comfortable with linux.* <br/>
-
-	**Virtual Machine** : You can install a virtual machine and install ubuntu on that. Follow this [Tutorial](https://youtu.be/v1JVqd8M3Yc?si=AaufZwAfmLKAP4BB) in that case. (Installation of the Virtual Machine is also included in the tutorial)<br /><br />
-	**WSL** : For Windows 11, check this [Tutorial](https://www.howtogeek.com/744328/how-to-install-the-windows-subsystem-for-linux-on-windows-11/) to set up WSL. <br /> <br />
-
-  **Microsoft  Store** : You can also directly download the Ubuntu from the store, you will get a terminal.
-
-    PS: For GUI app on WSL follow the [link](https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps)
-
-	**The Construct website** : You are also free to use [**theconstructsim**](https://www.theconstructsim.com/) without having to install anything. The Construct is an online platform that supports ROS development.
-
-</ul>
-
-* __Get familiar with Linux__:
-Here are a few additional resources that you can refer to in order to get familiar with Linux:
-	* [Video-based Tutorial](https://www.youtube.com/watch?v=IVquJh3DXUA "Introduction to Linux and Basic Linux Commands for Beginners")
-	* [Text-based Tutorial](https://ryanstutorials.net/linuxtutorial/ "Linux Tutorial")
-  * [Document containing useful linux command lines](https://docs.google.com/document/d/1aroDJBIP-mqYovI8sVYYjGrn_1ugpN5NBauLLihvEjM/edit?usp=sharing)
-
-* __Terminator installation for Ubuntu__:
-
-	It's highly recommended to use Terminator instead of stock Terminal as you can have tabs or split windows into few terminals, which will be very useful throughout.
-
-	To install **Terminator**, run the following command in the terminal:  
-	```bash
-	sudo apt-get install terminator
-	```
-
-* __ROS Installation/setup__:
-	- For Ubuntu 22.04: [ROS2 HUMBLE](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)
-Go to a particular link and put your first step in the world of ROS.
-
-      If you don’t want to have to source the setup file every time you open a new shell, then you can add the command to your shell startup script:
-
-```bash
-echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
-```
-
-* __IDE Installation__:
-
-	You are free to use a suitabe IDE to write code. The most commonly used IDE is **Visual Studio Code**. You can install it in your Ubuntu system and install **ROS VSCode Extention** in the VSCode application.
-
-
-## **Getting started with ROS:**<a name="Getting"></a>
-
-*Now that the installation is done, let’s dive into ROS!*
-
 ### **What is ROS?**
 
-ROS is a software framework for writing robot software. The main aim of ROS is to reuse the robotic software across the globe. ROS consists of a collection of tools, libraries, and conventions that aim to simplify the task of creating complex and robust robot behavior across a wide variety of robotic platforms.
-The official definition on ROS wiki is:
 
-*ROS is an open-source, meta-operating system for your robot. It provides the services you would expect from an operating system, including hardware abstraction, low-level device control, implementation of commonly-used functionality, message-passing between processes, and package management. It also provides tools and libraries for obtaining, building, writing, and running code across multiple computers. ROS is similar in some respects to robot frameworks, such as Player, YARP, Orocos, CARMEN, Orca, MOOS, and Microsoft Robotics Studio.*
+ROS (Robot Operating System) is an open-source software framework designed for writing robot software, much like how Sherlock Holmes uses his toolkit to solve mysteries. Just as Holmes relies on his magnifying glass and sharp reasoning to uncover hidden details, ROS equips developers with the essential tools and libraries to navigate the complexities of robot development. Its primary goal is to help developers reuse software across the globe, making it easier to create complex robot behaviors on a variety of platforms.
+
+ROS offers services like hardware abstraction, low-level device control, message-passing between processes, and package management. With its set of tools and libraries for obtaining, building, writing, and running code across multiple computers, ROS enables developers to seamlessly construct sophisticated robotic systems. While it shares similarities with other robotic frameworks like Player, YARP, and Microsoft Robotics Studio, its open-source nature and active community support make it stand out as the go-to toolkit for robotic development.
+
 
 ### **Basics of ROS**
 
-First of all, let us start with the basics of ROS.
-It would be better if you **write the code on your own instead of copying and pasting it directly.** You will grasp the topics covered better when you try the implementation on your own. It's preferable if you use __Python__ instead of __C++__ as python syntax is easier and more readable.
+Before we get into the action, it’s essential to understand the basics of ROS. It’s always best to write the code yourself rather than copying and pasting, as it helps you grasp the concepts more thoroughly. Python is recommended over C++ for beginners because of its easier syntax and readability.
+
+To get started, you'll need to create a ROS workspace and navigate the ROS filesystem. This may seem like an investigation at first, but don’t worry — just like Holmes solves complex cases step by step, you'll get there. We’ll walk you through some key tools, and the next few tutorials will focus on setting up your environment.
+
 
 To start off, these two tutorials will cover aspects such as **creating a ROS Workspace** and
 [**navigating the ROS Filesystem**](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html). 
 To help you a little bit more, we will also explain you some command line tools and will highlight the sections you should focus more when you open these links......
 
-The bullet points below a particular link will help you focus more on the important stuff and will help you to navigate better....
-
 Sections to focus in "Configuring your ROS environment":
 
 - Sourcing of setup.bash file : ```source /opt/ros/humble/setup.bash```
 The purpose of this command line is basically to tell your terminal the location of your workspace so that ROS can find its path. If we unsource the setup.bash files then the Ubuntu will not be able to locate the packages of that workspace.
-- Looking at the video below will help more.
 - Its an advise to not panic if you don't grasp things in one go, try to go completely by this twice or thrice for more clarity and try to connect dots while reading the second or third time.
-
-
 
 Next, we shall look at packages.
 
 #### **What is a package?** 
 
-ROS uses **packages** to organize its programs. Every ROS program that you want to create or execute is organized in a package. You can think of a package as **all the files that a specific ROS program contains**; all its CPP files, python files, configuration files, compilation files, launch files, and parameter files. In ROS2 framework the script within a package can be either of Python or CPP strictly. We will follow Python. All those files in the package are organized with the following structure:
+In the world of ROS, a package is the key to organizing your programs, much like a case file contains all the details needed for investigation. Every ROS program you write is contained within a package, which can include source code (either Python or C++), configuration files, launch files, and dependencies. The package structure is organized into directories such as:
 
-* __launch__ folder: Contains launch files
-* __scripts folder__: Source files (Python)
-* __package.xml__: Package information and dependencies
+launch: Contains launch files.
+scripts: Contains source files (Python).
+package.xml: Information about the package and its dependencies.
+
+In ROS2, Python or C++ are typically used for writing the script files in the package. If you want to move forward, understanding how to work with packages will be essential, just like Sherlock understanding the importance of each piece of evidence.
 
 ### **Colcon**
 
-In the ROS ecosystem the software is separated into numerous packages. It is very common that a developer is working on multiple packages at the same time. This is in contrast to workflows where a developer only works on a single software package at a time, and all dependencies are provided once but not being iterated on. A build tool performs the task of building a set of packages with a single invocation.
+In the ROS ecosystem, software is organized into many packages. Unlike workflows where a developer works on just one package at a time, ROS developers often handle multiple packages simultaneously. To manage this, Colcon is used as a build tool to compile all the packages together with a single command. It's akin to Holmes managing multiple clues from different locations and tying them all together to form a cohesive solution.
 
-For installing and configuring Colcon run the command:
-
+To install and configure Colcon, run the following command:
 ```bash
 sudo apt install python3-colcon-common-extensions
 ```
 
 ### **Create a workspace**
 
-A workspace is a directory containing ROS 2 packages. Before using ROS 2, it’s necessary to source your ROS 2 installation workspace in the terminal you plan to work in. This makes ROS 2’s packages available for you to use in that terminal.
+A workspace in ROS 2 is like Sherlock Holmes' case file—a place where all the necessary clues (ROS 2 packages) are stored. Before starting your investigation, you must "source" your ROS 2 workspace, just like Holmes prepares his tools before solving a case. This step ensures your terminal knows where to find the packages you need.
 
-Best practice is to create a new directory for every new workspace.
+For clarity and organization, it's best practice to create a new directory for each new workspace—just as Holmes keeps each case separate to avoid confusion.
+
+
 
 ```bash
-mkdir -p ~/erc_ws/src
-cd ~/erc_ws/src
+mkdir -p erc_ws/src
+cd erc_ws/src
 ```
-
 From the root of your workspace (erc_ws), you can now build your packages using the command:
 
 ```bash
 cd ..
 colcon build
 ```
-
 Now, let’s add the erc_ws path. Execute the following command:
 
 ```bash
@@ -177,22 +84,18 @@ Package creation in ROS 2 uses ament as its build system and colcon as its build
 Recall that packages should be created in the src directory, not the root of the workspace. So, navigate into ```erc_ws/src```, and run the package creation command:
 
 ```bash
-cd erc_ws/src
+cd src
 ros2 pkg create --build-type ament_python week0_tutorials
 ```
 
-If you get an error setup.py install is deprecated on running colcon build then you need to downgrade the setuptools to 58.2.0
-
-```bash
-pip3 install setuptools==58.2.0
-```
-
 ### Nodes
-One of the primary purposes of ROS is to facilitate communication between the ROS nodes. Every program in ROS is called a **node**. Every independent task can be separated into nodes which communicate with each other through channels. These channels are also known as **topics**.
+In ROS, each program is called a node—think of it like a clue in a Sherlock Holmes mystery. Each node does a specific job, like collecting evidence or analyzing a suspect. These nodes talk to each other through topics, which are like channels for sharing information.
 
-For example, one node can capture the images from a camera and send the images to another node for processing. After processing the image, the second node can send a control signal to a third node for controlling a robotic manipulator in response to the camera view.
+For example, one node might capture images from a camera, sending them to another node for analysis, like Holmes looking over a piece of evidence. Then, the second node might send a command to a third node, like Holmes taking action based on his findings. The nodes communicate by sending messages—one node can publish a message to a topic, or another node can subscribe to a topic to receive the information, helping to solve the task, just like Sherlock solving the case.
 
-The main mechanism used by ROS nodes to communicate is by sending and receiving **messages**. The **messages** are organized into specific categories called **topics**. Nodes may **publish** messages on a particular topic or **subscribe** to a topic to receive information.
+
+![Nodes-TopicandService](https://github.com/user-attachments/assets/5ba624ed-6b3d-4de1-b738-a2fbfc2d63a4)
+
 
 ### Introducing TurtleSim
 
@@ -204,13 +107,16 @@ ros2 run turtlesim turtlesim_node
 ```
 You'll see the new turtlesim window.
 
-## Using ros2 launch to run multiple nodes at once
+![turtlesim](https://github.com/user-attachments/assets/3cb5f1c4-f091-4677-9080-fde000136fe6)
+
+# *Creating a launch file*
+
 
 ROS 2 Launch files allow you to start up and configure a number of executables containing ROS 2 nodes simultaneously.
 
 Create a new directory in ```erc_ws/src/week0_tutorials``` to store your launch files:
 ```bash
-cd src/week0_tutorials
+cd week0_tutorials
 mkdir launch
 ```
 
@@ -218,7 +124,8 @@ Let’s put together a ROS 2 launch file using the turtlesim package and its exe
 
 ```bash
 cd launch
-touch turtlesim_launch.py
+touch turtlesim_mimic_launch.py
+chmod +x turtlesim_mimic_launch.py
 ```
 Open this directory with code using the following command
 ```bash
@@ -235,8 +142,24 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package='turtlesim',
+            namespace='turtlesim1',
             executable='turtlesim_node',
             name='sim'
+        ),
+        Node(
+            package='turtlesim',
+            namespace='turtlesim2',
+            executable='turtlesim_node',
+            name='sim'
+        ),
+        Node(
+            package='turtlesim',
+            executable='mimic',
+            name='mimic',
+            remappings=[
+                ('/input/pose', '/turtlesim1/turtle1/pose'),
+                ('/output/cmd_vel', '/turtlesim2/turtle1/cmd_vel'),
+            ]
         )
     ])
 ```
@@ -245,8 +168,24 @@ Then, hit <kbd>CTRL</kbd>+<kbd>S</kbd>, to save the changes to the file, then cl
 To run the launch file created above, enter into the directory you created earlier and run the following command:
 
 ```bash
-ros2 launch turtlesim_launch.py
+ros2 launch turtlesim_mimic_launch.py
 ```
+### Publishing a message 
+To see the system in action, open a new terminal and run the ros2 topic pub command on the /turtlesim1/turtle1/cmd_vel topic to get the first turtle moving
+
+```bash
+cd erc_ws
+cd src
+cd week0_tutorials
+cd launch
+```
+
+```bash
+ros2 topic pub -r 1 /turtlesim1/turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -1.8}}"
+```
+
+![image](https://github.com/user-attachments/assets/537746fc-d2f7-47f4-97b7-709e3b524dfc)
+
 
 File structure is something like this
 
@@ -260,7 +199,6 @@ erc_ws
                |_launch
                |_config
 ```
-
 Launch files in a particular package can launch nodes from other packages as well as launch files from other packages.
 
 ```PS:``` In the turtlesim_launch we run the launch file from the same directory, if we want to run it from any directory using the generalized command, i.e.
@@ -269,18 +207,14 @@ ros2 launch <package name> <launch file name>
 ```
  then we have to specify the path in setup.py and then go to workspace directory and then colcon build, and run this. Here we exceuted the run file directly from the directory, though we will do this later in the end of the tutorial in the ```pubsub.launch.py``` case.
 
-
 ### Topics
+In ROS, a topic acts like a channel for exchanging data, with nodes serving as either Publishers, sending data, or Subscribers, receiving it. Each topic has a specific message type, similar to how Sherlock Holmes might focus on a specific type of clue in a case. To communicate effectively, both publishers and subscribers must handle the same message type.
 
-A topic is simply a medium of exchange of data (like a channel). Some nodes called **Publishers** can publish data on the topic, some nodes called **Subscribers** can subscribe to the data on the topic.
+Nodes can create publishers and subscribers in any ROS-supported language. When a node publishes data, it notifies the ROS master, while a subscriber asks the master where to find the data—like Sherlock and Watson sharing clues. Just as Holmes tracks multiple leads, a node can have multiple publishers and subscribers for different topics.
 
-A topic has a message type (similar to the data type of a variable). All publishers and subscribers on this topic must publish/subscribe data of the associated message type.
 
-You can create a publisher or subscriber in any ROS supported language you want, directly inside ROS nodes.
 
-When a node wants to publish something, it will inform the ROS master. When another node wants to subscribe to a topic, it will ask the ROS master form where it can get the data.
-
-Finally, a node can contain many publishers and subscribers for many different topics.
+![Topic-MultiplePublisherandMultipleSubscriber](https://github.com/user-attachments/assets/3a6fd12b-35f9-4236-9e07-82b41e87b22a)
 
 PS:
 
@@ -503,15 +437,16 @@ Then, hit <kbd>CTRL</kbd>+<kbd>S</kbd>, to save the changes to the file.
 You likely already have the ```rclpy``` and ```std_msgs``` packages installed as part of your ROS 2 system. It’s good practice to run rosdep in the root of your workspace (erc_ws) to check for missing dependencies before building:
 
 ```bash
-cd ~
-cd erc_ws
+cd ..
 ```
+repeet till erc_ws directory 
 
 ```(optional)```
 
 ```bash
 rosdep install -i --from-path src --rosdistro humble -y
 ```
+
 
 
 Finally, go to erc_ws and build the package
