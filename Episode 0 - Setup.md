@@ -5,7 +5,7 @@ This guide provides step-by-step instructions to install Docker and run a ROS co
 
 Final Usage (once the whole setup is done) for Docker: 
 ![docker](https://github.com/user-attachments/assets/c19f3b66-9136-4280-9945-ada8ea662b58)
-<img src="W0_Images/2024-12-01">
+<img src="misc/WhatsApp Video 2024-12-01 at 16.42.44.gif">
 
 ---
 ## Index
