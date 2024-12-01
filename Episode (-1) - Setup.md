@@ -49,7 +49,7 @@ Final usage (once the whole setup is done) for Docker:
 
 > **Note**: The first run may take some time to download necessary files and set up the environment.
 
-<img width="784" alt="image" src="https://github.com/user-attachments/assets/e2b2b726-06e6-4ecd-a05e-138732fe72bd">
+<img width="1372" alt="image" src="https://github.com/user-attachments/assets/0cac3b54-d77f-4c06-b1e7-a021ba9349b6">
 
 
 ### Step 4: Access ROS in the Browser  
@@ -90,7 +90,7 @@ Final usage (once the whole setup is done) for Docker:
 
 > **Note**: The first run may take some time to download necessary files and set up the environment.
 
-<img width="784" alt="image" src="https://github.com/user-attachments/assets/e2b2b726-06e6-4ecd-a05e-138732fe72bd">
+<img width="1372" alt="image" src="https://github.com/user-attachments/assets/0cac3b54-d77f-4c06-b1e7-a021ba9349b6">
 
 
 
@@ -136,7 +136,7 @@ Final usage (once the whole setup is done) for Docker:
 
 > **Note**: The first run may take some time to download necessary files and set up the environment.
 
-<img width="784" alt="image" src="https://github.com/user-attachments/assets/e2b2b726-06e6-4ecd-a05e-138732fe72bd">
+<img width="1372" alt="image" src="https://github.com/user-attachments/assets/0cac3b54-d77f-4c06-b1e7-a021ba9349b6">
 
 
 ### Step 4: Access ROS in the Browser  
