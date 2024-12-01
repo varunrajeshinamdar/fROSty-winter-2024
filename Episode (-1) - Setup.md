@@ -154,6 +154,13 @@ Final Usage (once the whole setup is done) for Docker:
 
 The above method of using using ROS is more then enough , EASY and well organizesd for the bootcamp , but if you want to delve more into robotics in future , its advisable to use ROS natively in ubuntu ,you can follow the below steps to install it :
 
+**WARNING** - The following installation procedures can make you do stuff like this ...
+
+<img src="W0_Images/Sherlock_beating.gif" height=300> <img src="W0_Images/Sherlock_screaming.gif" height=300>
+
+or even worse.
+
+
 
 * __Ubuntu Installation__ :
 
