@@ -5,9 +5,6 @@ This guide provides step-by-step instructions to install Docker and run a ROS co
 
 
 ---
-
-# Docker Installation and Running ROS Containers
-
 ## Index
 - [Windows Installation](#for-windows)
 - [macOS Installation](#for-macos)
@@ -15,7 +12,7 @@ This guide provides step-by-step instructions to install Docker and run a ROS co
   
 ---
 
-[Rest of the original document remains the same]
+
 ## For Windows  
 
 ### Step 1: Install WSL (Windows Subsystem for Linux)  
