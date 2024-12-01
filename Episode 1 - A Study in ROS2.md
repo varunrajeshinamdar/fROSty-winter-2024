@@ -122,6 +122,9 @@ In ROS, each program is called a node—think of it like a clue in a Sherlock Ho
 
 For example, one node might capture images from a camera, sending them to another node for analysis, like Holmes looking over a piece of evidence. Then, the second node might send a command to a third node, like Holmes taking action based on his findings. The nodes communicate by sending messages—one node can publish a message to a topic, or another node can subscribe to a topic to receive the information, helping to solve the task, just like Sherlock solving the case.
 
+> **Point to Ponder**: How is a Node differnt from a package ??
+
+
 
 ![Nodes-TopicandService](https://github.com/user-attachments/assets/5ba624ed-6b3d-4de1-b738-a2fbfc2d63a4)
 
