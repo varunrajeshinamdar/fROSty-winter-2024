@@ -138,7 +138,7 @@ You'll see the new turtlesim window.
 
 ![turtlesim](https://github.com/user-attachments/assets/3cb5f1c4-f091-4677-9080-fde000136fe6)
 
-# *Creating a launch file*
+## *Creating a launch file*
 ---
 
 ROS 2 Launch files allow you to start up and configure a number of executables containing ROS 2 nodes simultaneously.
@@ -237,6 +237,7 @@ ros2 launch <package name> <launch file name>
  then we have to specify the path in setup.py and then go to workspace directory and then colcon build, and run this. Here we exceuted the run file directly from the directory, though we will do this later in the end of the tutorial in the ```pubsub.launch.py``` case.
 
 ### Topics
+---
 In ROS, a topic acts like a channel for exchanging data, with nodes serving as either Publishers, sending data, or Subscribers, receiving it. Each topic has a specific message type, similar to how Sherlock Holmes might focus on a specific type of clue in a case. To communicate effectively, both publishers and subscribers must handle the same message type.
 
 Nodes can create publishers and subscribers in any ROS-supported language. When a node publishes data, it notifies the ROS master, while a subscriber asks the master where to find the data—like Sherlock and Watson sharing clues. Just as Holmes tracks multiple leads, a node can have multiple publishers and subscribers for different topics.
