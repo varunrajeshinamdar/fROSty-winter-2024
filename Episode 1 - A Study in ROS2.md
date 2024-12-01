@@ -5,6 +5,9 @@ ROS (Robot Operating System) is an open-source software framework designed for w
 
 ROS offers services like hardware abstraction, low-level device control, message-passing between processes, and package management. With its set of tools and libraries for obtaining, building, writing, and running code across multiple computers, ROS enables developers to seamlessly construct sophisticated robotic systems. While it shares similarities with other robotic frameworks like Player, YARP, and Microsoft Robotics Studio, its open-source nature and active community support make it stand out as the go-to toolkit for robotic development.
 
+This Week will cover the core ROS 2 concepts including working with nodes, topics, services, parameters and more through practical examples using the ROS 2 Humble release.
+
+<img src="W0_Images/ros2.png " width=400 height=100>
 
 ### **Basics of ROS**
 
