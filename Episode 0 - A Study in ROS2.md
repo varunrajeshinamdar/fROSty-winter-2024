@@ -164,9 +164,35 @@ To run the 'turtlesim_node' node, run this **in a terminal**:
 ```bash
 ros2 run turtlesim turtlesim_node
 ```
-You'll see the new turtlesim window.
+You'll see a new turtlesim window.
 
 ![turtlesim](https://github.com/user-attachments/assets/3cb5f1c4-f091-4677-9080-fde000136fe6)
+
+#### How to move it ??
+
+Open a new terminal
+
+```bash
+ros2 run turtlesim turtle_teleop_key
+```
+
+Arrange three windows: a terminal running turtlesim_node, a terminal running turtle_teleop_key, and the turtlesim window. Ensure you can see the turtlesim window while the turtle_teleop_key terminal is active to control the turtle in turtlesim.
+
+Use the arrow keys on your keyboard to control the turtle. It will move around the screen, using its attached “pen” to draw the path it followed so far.
+
+After playing a bit with teh trutle , lets ponder whats happening ?
+
+for that first lets see the "command-onology" of ROS here 
+
+`ros2 run turtlesim turtle_teleop_key` : 
+-  `ros2 run` runs a exceutable ROS file
+-  `turtlesim` the package which have to run
+-  `turtle_teleop_key` The name of the executable node to be run , here 'turtle_teleop_key' which is responsible in controling the turtle
+
+summing up below 
+```bash
+ros2 run <package name> <executable node in the package> 
+```
 
 ## Learning about launch files from turtlesim mimic example
 ---
