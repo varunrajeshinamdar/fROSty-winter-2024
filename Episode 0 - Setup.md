@@ -177,7 +177,7 @@ Here are a few additional resources that you can refer to in order to get famili
  
 
 
-* __ROS Installation/setup__:
+* __Clearing the Pitch before ROS Installation__:
         - We will be using ROS2 Humble for the bootcamp , because its well documented and has a large coumminunity . So before you install ROS2 humble in your system , make sure you dont have any previous installs of ROS (even the faulty installs ) for that you can run the below commands.
 ```bash
 dpkg -l | grep ros-* 
@@ -190,7 +190,8 @@ then
 ```bash
 sudo apt autoremove
 ```
-  
+
+* __ROS Installation/Setup__:
 - Ubuntu 22.04: [ROS2 HUMBLE](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)
 Go to a particular link and put your first step in the world of ROS.
 
