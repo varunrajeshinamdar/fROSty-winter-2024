@@ -150,7 +150,7 @@ Final Usage (once the whole setup is done) for Docker:
 
 ---
 
-### ROS installtion in Native UBUNTU - No Docker:
+### ROS installtion in Native UBUNTU - No Docker (Proceed at your own risk!):
 
 The above method of using using ROS is more then enough , EASY and well organizesd for the bootcamp , but if you want to delve more into robotics in future , its advisable to use ROS natively in ubuntu ,you can follow the below steps to install it :
 
@@ -162,7 +162,7 @@ or even worse.
 
 
 
-* __Ubuntu Installation__ :
+* __Ubuntu Installation__ :(( If you are already using ubuntu , then skip to the ROS installation part)
 
 	**Dual-boot**: Follow this [Tutorial](https://www.tomshardware.com/how-to/dual-boot-linux-and-windows-11) or this [Video Tutorial](https://youtu.be/QKn5U2esuRk?si=RP5TieFTjEVU240-) to dual-boot Ubuntu with Windows. For MacOS, follow the procedure in this [video tutorial](https://youtu.be/jbUulXVZIBI?si=XTMyoI4yP6OC0Jc5) </li>
 <span style="color:red">[WARNING], Do at your own risk! We will be not responsible if you lose your data. __Follow instructions carefully and make backups before you start!__</span> <br />
@@ -178,7 +178,20 @@ Here are a few additional resources that you can refer to in order to get famili
 
 
 * __ROS Installation/setup__:
-	- For Ubuntu 22.04: [ROS2 HUMBLE](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)
+        - We will be using ROS2 Humble for the bootcamp , because its well documented and has a large coumminunity . So before you install ROS2 humble in your system , make sure you dont have any previous installs of ROS (even the faulty installs ) for that you can run the below commands.
+```bash
+dpkg -l | grep ros-* # to check the version of ROS installed
+```
+- if you get any output other then humble then follow the below commads to remove it
+```bash
+sudo apt remove ~nros-<your-ros-version like>-*
+```
+then 
+```bash
+sudo apt autoremove
+```
+  
+- For Ubuntu 22.04: [ROS2 HUMBLE](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)
 Go to a particular link and put your first step in the world of ROS.
 
       If you don’t want to have to source the setup file every time you open a new shell, then you can add the command to your shell startup script:
@@ -186,6 +199,5 @@ Go to a particular link and put your first step in the world of ROS.
 ```bash
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 ```
-
 
 
