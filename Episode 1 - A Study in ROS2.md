@@ -9,6 +9,7 @@ This Week will cover the core ROS 2 concepts including working with nodes, topic
 
 <img src="W0_Images/ros2.png " width=400 height=100>
 
+---
 ### **Basics of ROS**
 
 Before we get into the action, it’s essential to understand the basics of ROS. It’s always best to write the code yourself rather than copying and pasting, as it helps you grasp the concepts more thoroughly. Python is recommended over C++ for beginners because of its easier syntax and readability.
