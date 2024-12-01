@@ -128,9 +128,36 @@ For example, one node might capture images from a camera, sending them to anothe
 
 ![Nodes-TopicandService](https://github.com/user-attachments/assets/5ba624ed-6b3d-4de1-b738-a2fbfc2d63a4)
 
+### Topics
+---
+In ROS, a topic acts like a channel for exchanging data, with nodes serving as either Publishers, sending data, or Subscribers, receiving it. Each topic has a specific message type, similar to how Sherlock Holmes might focus on a specific type of clue in a case. To communicate effectively, both publishers and subscribers must handle the same message type.
+
+Nodes can create publishers and subscribers in any ROS-supported language. When a node publishes data, it notifies the ROS master, while a subscriber asks the master where to find the data—like Sherlock and Watson sharing clues. Just as Holmes tracks multiple leads, a node can have multiple publishers and subscribers for different topics.
+
+
+
+![Topic-MultiplePublisherandMultipleSubscriber](https://github.com/user-attachments/assets/3a6fd12b-35f9-4236-9e07-82b41e87b22a)
+
+PS:
+
+- ```rqt_graph```:
+Reveals communication between nodes through topics.
+Essential for understanding node interactions.
+
+- ```ros2 topic echo```:
+Displays real-time data published on a specific topic.
+Useful for monitoring topic content.
+
+- ```ros2 topic pub```:
+Enables manual publication on desired topics.
+Handy for testing and injecting data into the system.
+
+Try running these commands and viewing the output.
+
+<img src="W0_Images/mind-palace-sherlock-holmes.gif ">
 
 ### Introducing TurtleSim
-
+---
 To demonstrate how to run nodes, let us run 'turtlesim_node' node from a pre-installed package, 'turtlesim':
 
 To run the 'turtlesim_node' node, run this **in a terminal**:
@@ -241,33 +268,7 @@ ros2 launch <package name> <launch file name>
 ```
  then we have to specify the path in setup.py and then go to workspace directory and then colcon build, and run this. Here we exceuted the run file directly from the directory, though we will do this later in the end of the tutorial in the ```pubsub.launch.py``` case.
 
-### Topics
----
-In ROS, a topic acts like a channel for exchanging data, with nodes serving as either Publishers, sending data, or Subscribers, receiving it. Each topic has a specific message type, similar to how Sherlock Holmes might focus on a specific type of clue in a case. To communicate effectively, both publishers and subscribers must handle the same message type.
 
-Nodes can create publishers and subscribers in any ROS-supported language. When a node publishes data, it notifies the ROS master, while a subscriber asks the master where to find the data—like Sherlock and Watson sharing clues. Just as Holmes tracks multiple leads, a node can have multiple publishers and subscribers for different topics.
-
-
-
-![Topic-MultiplePublisherandMultipleSubscriber](https://github.com/user-attachments/assets/3a6fd12b-35f9-4236-9e07-82b41e87b22a)
-
-PS:
-
-- ```rqt_graph```:
-Reveals communication between nodes through topics.
-Essential for understanding node interactions.
-
-- ```ros2 topic echo```:
-Displays real-time data published on a specific topic.
-Useful for monitoring topic content.
-
-- ```ros2 topic pub```:
-Enables manual publication on desired topics.
-Handy for testing and injecting data into the system.
-
-Try running these commands and viewing the output.
-
-<img src="W0_Images/mind-palace-sherlock-holmes.gif ">
 
 ## Publisher-Subscriber Interface <a name="PubSub"></a>
 ---
