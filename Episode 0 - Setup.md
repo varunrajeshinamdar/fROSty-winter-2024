@@ -179,20 +179,21 @@ Here are a few additional resources that you can refer to in order to get famili
 
 * __Clearing the Pitch before ROS Installation__:
         - We will be using ROS2 Humble for the bootcamp , because its well documented and has a large coumminunity . So before you install ROS2 humble in your system , make sure you dont have any previous installs of ROS (even the faulty installs ) for that you can run the below commands.
-```bash
-dpkg -l | grep ros-* 
-```
-- To check which version of ros is installed. if you get any output other then humble then follow the below commads to remove it
-```bash
-sudo apt remove ~nros-<your-ros-version like>-*
-```
-then 
-```bash
-sudo apt autoremove
-```
+	```bash
+	dpkg -l | grep ros-* 
+	```
+	- To check which version of ros is installed. if you get any output other then humble then follow the below commads to remove it
+	
+	```bash
+	sudo apt remove ~nros-<your-ros-version like>-*
+	```
+	then 
+	```bash
+	sudo apt autoremove
+	```
 
 * __ROS Installation/Setup__:
-- Ubuntu 22.04: [ROS2 HUMBLE](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)
+	- Ubuntu 22.04: [ROS2 HUMBLE](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)
 Go to a particular link and put your first step in the world of ROS.
 
 If you don’t want to have to source the setup file every time you open a new shell, then you can add the command to your shell startup script:
