@@ -1,5 +1,5 @@
-### **What is ROS?**
-
+# **What is ROS?**
+---
 
 ROS (Robot Operating System) is an open-source software framework designed for writing robot software, much like how Sherlock Holmes uses his toolkit to solve mysteries. Just as Holmes relies on his magnifying glass and sharp reasoning to uncover hidden details, ROS equips developers with the essential tools and libraries to navigate the complexities of robot development. Its primary goal is to help developers reuse software across the globe, making it easier to create complex robot behaviors on a variety of platforms.
 
