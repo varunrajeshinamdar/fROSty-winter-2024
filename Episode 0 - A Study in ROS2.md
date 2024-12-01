@@ -521,7 +521,7 @@ Note that once you stop running the Publisher Node ( Press `Ctrl`+`C` while you'
 ### Running the publisher and subscriber using a launch file
 ---
 
-Create a file ```week0_tutorials.launch.py``` in the ```launch``` folder of ```erc_ws/src/week0_tutorials``` 
+Create a file ```pubsub.launch.py``` in the ```launch``` folder of ```erc_ws/src/week0_tutorials``` 
 
 ```bash
 cd launch
