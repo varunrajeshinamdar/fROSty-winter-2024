@@ -36,7 +36,7 @@ The final week has come, for you to show all that you have mastered. Not just th
 
 .... to be continued
 
-Head on to [Episode 0](/Episode%200%20-%20A%20Study%20in%20ROS2.md) and start the investigation! 
+Head on to [Episode 0][/Episode%20-%20The%20Prequel%20to%20the%20Mystery.md] and start the investigation! 
 
 Let's begin !!
 Note: We will be using the Docker method outlined in Week Zero throughout the entire content. Please follow the instructions from Week Zero thoroughly to ensure consistency and proper setup for all tasks
