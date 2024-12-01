@@ -195,6 +195,8 @@ def generate_launch_description():
         )
     ])
 ```
+Take your time and understand the the above , how we can calling the multiple node files with there respective packages.
+
 Then, hit <kbd>CTRL</kbd>+<kbd>S</kbd>, to save the changes to the file, then close the window.
 
 To run the launch file created above, enter into the directory you created earlier and run the following command:
