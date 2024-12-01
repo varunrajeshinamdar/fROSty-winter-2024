@@ -28,7 +28,7 @@ The purpose of this command line is basically to tell your terminal the location
 - Its an advise to not panic if you don't grasp things in one go, try to go completely by this twice or thrice for more clarity and try to connect dots while reading the second or third time.
 
 Next, we shall look at packages.
---
+
 ### **What is a package?** 
 
 In the world of ROS, a package is the key to organizing your programs, much like a case file contains all the details needed for investigation. Every ROS program you write is contained within a package, which can include source code (either Python or C++), configuration files, launch files, and dependencies. The package structure is organized into directories such as:
