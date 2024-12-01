@@ -267,7 +267,7 @@ Handy for testing and injecting data into the system.
 
 Try running these commands and viewing the output.
 
-<img src="W0_Images/mind-palace-sherlock-holmes.gif " width=400 height=100>
+<img src="W0_Images/mind-palace-sherlock-holmes.gif ">
 
 ## Publisher-Subscriber Interface <a name="PubSub"></a>
 ---
