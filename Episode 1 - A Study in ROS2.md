@@ -50,25 +50,25 @@ sudo apt install python3-colcon-common-extensions
 #### **Why Colcon?**
 
 Imagine you’re working on a robot project, and you’ve divided the software into multiple packages:
-	•	- Package A: Reads sensor data.
-	•	- Package B: Processes that data.
-	•	- Package C: Controls the motors based on the processed data.
+- Package A: Reads sensor data.
+- Package B: Processes that data.
+- Package C: Controls the motors based on the processed data.
 
 These packages depend on each other:
-	•	- If you make a change to Package A, Package B might need to adapt to the updated data structure.
-	•	- If you modify Package B, you’d need to ensure Package C works correctly with the updated processing logic.
+- If you make a change to Package A, Package B might need to adapt to the updated data structure.
+- If you modify Package B, you’d need to ensure Package C works correctly with the updated processing logic.
 
 Instead of manually building each package one by one and resolving dependencies yourself, Colcon automates this process. It:
-	1.	- Detects all the packages in your workspace.
-	2.	- Figures out the correct build order based on dependencies.
-	3.	- Compiles everything with a single command: colcon build.
+- Detects all the packages in your workspace.
+- Figures out the correct build order based on dependencies.
+- Compiles everything with a single command: colcon build.
 
 #### The Sherlock Holmes Analogy
 
 Colcon’s role is similar to Sherlock Holmes solving a mystery:
-	•	- Holmes gathers clues (analogous to packages).
-	•	- Each clue is part of a larger puzzle (packages depend on and contribute to the whole system).
-	•	- Holmes analyzes and ties them all together to form a complete solution (Colcon builds all the interdependent packages into a cohesive system).
+- Holmes gathers clues (analogous to packages).
+- Each clue is part of a larger puzzle (packages depend on and contribute to the whole system).
+- Holmes analyzes and ties them all together to form a complete solution (Colcon builds all the interdependent packages into a cohesive system).
 
 ### **Create a workspace**
 
