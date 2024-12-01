@@ -1,0 +1,41 @@
+
+# **Introduction to ROS**
+---
+
+## **What is ROS?**
+
+ROS (Robot Operating System) is an open-source software framework for writing robot software. It provides developers with essential tools and libraries to manage the complexities of robotic development, making it easier to create complex robot behaviors on various platforms. Key features include:
+
+- Hardware abstraction
+- Low-level device control
+- Message-passing between processes
+- Package management
+
+ROS stands out for its open-source nature and a vibrant community, making it the go-to choice for robotic software development.
+
+This tutorial covers the **ROS 2 Humble** release, including concepts like nodes, topics, services, and parameters, with practical examples.
+
+---
+
+## **Getting Started with ROS**
+
+### **Basics of ROS**
+
+1. **Install ROS Workspace**  
+   A ROS workspace organizes your code and allows efficient management. Create it using:
+   ```bash
+   mkdir -p ~/erc_ws/src
+   cd ~/erc_ws/src
+   ```
+
+2. **Source the ROS Environment**  
+   Always source the ROS setup file:
+   ```bash
+   source /opt/ros/humble/setup.bash
+   ```
+
+3. **Recommended Language**  
+   Beginners should start with Python for its readability and ease of use.
+
+4. **Command Line Essentials**  
+   Familiarize yourself with ROS CLI commands for efficient navigation and troubleshooting.
