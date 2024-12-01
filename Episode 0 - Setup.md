@@ -178,7 +178,7 @@ Here are a few additional resources that you can refer to in order to get famili
 
 
 * __Clearing the Pitch before ROS Installation__:
-        - We will be using ROS2 Humble for the bootcamp , because its well documented and has a large coumminunity . So before you install ROS2 humble in your system , make sure you dont have any previous installs of ROS (even the faulty installs ) for that you can run the below commands.
+        	- We will be using ROS2 Humble for the bootcamp , because its well documented and has a large coumminunity . So before you install ROS2 humble in your system , make sure you dont have any previous installs of ROS (even the faulty installs ) for that you can run the below commands.
 	```bash
 	dpkg -l | grep ros-* 
 	```
