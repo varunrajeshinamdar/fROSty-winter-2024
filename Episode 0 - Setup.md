@@ -27,7 +27,7 @@ Final Usage (once the whole setup is done) for Docker:
    ```
 3. Once the installation is complete, reboot your system.  
 
-> **Note**: If you already have WSL installed, you can skip this step and move to the next one.  
+> **Note**: If you already have WSL installed, you can skip this step and move to the next one.You can check if WSL is installed in your system by running `wsl --list --verbose` in the powershell. It will show the list of distros installed in WSL , if you have it already or else it will tell command not found. 
 
 ### Step 2: Install Docker Desktop  
 
