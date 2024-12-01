@@ -158,7 +158,7 @@ The above method of using using ROS is more then enough , EASY and well organize
 
 	**Dual-boot**: Follow this [Tutorial](https://www.tomshardware.com/how-to/dual-boot-linux-and-windows-11) or this [Video Tutorial](https://youtu.be/QKn5U2esuRk?si=RP5TieFTjEVU240-) to dual-boot Ubuntu with Windows. For MacOS, follow the procedure in this [video tutorial](https://youtu.be/jbUulXVZIBI?si=XTMyoI4yP6OC0Jc5) </li>
 <span style="color:red">[WARNING], Do at your own risk! We will be not responsible if you lose your data. __Follow instructions carefully and make backups before you start!__</span> <br />
-*For absolute beginners, we recommend going for any one of the this  installation , we suggest you to go with the docker part mentioned above. Dual-booting can be a little daunting. And you can always opt for dual-booting once you're comfortable with linux.* <br/>
+> **Note**:  For absolute beginners, we recommend going for any one of the this  installation , we suggest you to go with the docker part mentioned above. Dual-booting can be a little daunting. And you can always opt for dual-booting once you're comfortable with linux.
 
 
 * __Get familiar with Linux__:
