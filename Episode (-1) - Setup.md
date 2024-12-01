@@ -54,7 +54,9 @@ This guide provides step-by-step instructions to install Docker and run a ROS co
 1. Open your web browser.  
 2. In the address bar, type `localhost:6080` and press Enter.  
 3. You should now see your ROS environment running inside Docker.
-4. To stop it , run `contol + C` in the terminal and to run the container again , just toggle the play button in the docker desktop , no need to folow the command line code again :)) 
+4. To stop it , run `contol + C` in the terminal and to run the container again , just toggle the play button in the docker desktop , no need to folow the command line code again :))
+   <img width="1372" alt="image" src="https://github.com/user-attachments/assets/e68e95d1-2dc6-4fc3-807c-c8f91ab67086">
+
 
 ---
 
@@ -94,7 +96,9 @@ This guide provides step-by-step instructions to install Docker and run a ROS co
 1. Open your web browser.  
 2. In the address bar, type `localhost:6080` and press Enter.  
 3. You should now see your ROS environment running inside Docker.
-4. To stop it , run `contol + C` in the terminal and to run the container again , just toggle the play button in the docker desktop , no need to folow the command line code again :))   
+4. To stop it , run `contol + C` in the terminal and to run the container again , just toggle the play button in the docker desktop , no need to folow the command line code again :))
+   <img width="1372" alt="image" src="https://github.com/user-attachments/assets/e68e95d1-2dc6-4fc3-807c-c8f91ab67086">
+
 
 ---
 
@@ -137,6 +141,8 @@ This guide provides step-by-step instructions to install Docker and run a ROS co
 1. Open your web browser.  
 2. In the address bar, type `localhost:6080` and press Enter.  
 3. You should now see your ROS environment running inside Docker.
-4. To stop it , run `contol + C` in the terminal and to run the container again , just toggle the play button in the docker desktop , no need to folow the command line code again :)) 
+4. To stop it , run `contol + C` in the terminal and to run the container again , just toggle the play button in the docker desktop , no need to folow the command line code again :))
+   <img width="1372" alt="image" src="https://github.com/user-attachments/assets/e68e95d1-2dc6-4fc3-807c-c8f91ab67086">
+
 
 ---
