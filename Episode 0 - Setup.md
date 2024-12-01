@@ -187,7 +187,7 @@ Here are a few additional resources that you can refer to in order to get famili
 	```bash
 	sudo apt remove ~nros-<your-ros-version like>-*
 	```
-	then 
+	- then run this for cleaning up
 	```bash
 	sudo apt autoremove
 	```
