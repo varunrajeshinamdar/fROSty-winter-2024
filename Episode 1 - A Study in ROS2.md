@@ -47,7 +47,7 @@ To install and configure Colcon, run the following command:
 ```bash
 sudo apt install python3-colcon-common-extensions
 ```
-## **Why Colcon?**
+#### **Why Colcon?**
 
 Imagine you’re working on a robot project, and you’ve divided the software into multiple packages:
 	•	Package A: Reads sensor data.
@@ -63,7 +63,7 @@ Instead of manually building each package one by one and resolving dependencies 
 	2.	Figures out the correct build order based on dependencies.
 	3.	Compiles everything with a single command: colcon build.
 
-# The Sherlock Holmes Analogy
+#### The Sherlock Holmes Analogy
 
 Colcon’s role is similar to Sherlock Holmes solving a mystery:
 	•	Holmes gathers clues (analogous to packages).
