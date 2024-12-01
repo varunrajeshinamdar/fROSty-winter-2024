@@ -28,9 +28,9 @@ The purpose of this command line is basically to tell your terminal the location
 - Its an advise to not panic if you don't grasp things in one go, try to go completely by this twice or thrice for more clarity and try to connect dots while reading the second or third time.
 
 Next, we shall look at packages.
-----
-### **What is a package?** 
 
+### **What is a package?** 
+---
 In the world of ROS, a package is the key to organizing your programs, much like a case file contains all the details needed for investigation. Every ROS program you write is contained within a package, which can include source code (either Python or C++), configuration files, launch files, and dependencies. The package structure is organized into directories such as:
 
 - launch: Contains launch files.
@@ -40,7 +40,7 @@ In the world of ROS, a package is the key to organizing your programs, much like
 In ROS2, Python or C++ are typically used for writing the script files in the package. If you want to move forward, understanding how to work with packages will be essential, just like Sherlock understanding the importance of each piece of evidence.
 
 ### **Colcon**
-
+---
 In the ROS ecosystem, software is organized into many packages. Unlike workflows where a developer works on just one package at a time, ROS developers often handle multiple packages simultaneously. To manage this, Colcon is used as a build tool to compile all the packages together with a single command. It's akin to Holmes managing multiple clues from different locations and tying them all together to form a cohesive solution.
 
 > **Note**: remember ` s++ `  in CS101 , colcon is also a similar build tool , but build linked several pacakges at once.
@@ -73,7 +73,7 @@ Colcon’s role is similar to Sherlock Holmes solving a mystery:
 - Holmes analyzes and ties them all together to form a complete solution (Colcon builds all the interdependent packages into a cohesive system).
 
 ### **Create a workspace**
-
+---
 A workspace in ROS 2 is like Sherlock Holmes' case file—a place where all the necessary clues (ROS 2 packages) are stored. Before starting your investigation, you must "source" your ROS 2 workspace, just like Holmes prepares his tools before solving a case. This step ensures your terminal knows where to find the packages you need.
 
 For clarity and organization, it's best practice to create a new directory for each new workspace—just as Holmes keeps each case separate to avoid confusion.
@@ -104,7 +104,7 @@ This command applies the changes immediately without restarting your terminal.
 
 
 ### **Create a new package**
-
+---
 A package is an organizational unit for your ROS 2 code. If you want to be able to install your code or share it with others, then you’ll need it to be organized in a package. With packages, you can release your ROS 2 work and allow others to build and use it easily.
 
 Package creation in ROS 2 uses ament as its build system and colcon as its build tool. You can create a package using either CMake or Python.
@@ -117,6 +117,7 @@ ros2 pkg create --build-type ament_python week0_tutorials
 ```
 
 ### Nodes
+---
 In ROS, each program is called a node—think of it like a clue in a Sherlock Holmes mystery. Each node does a specific job, like collecting evidence or analyzing a suspect. These nodes talk to each other through topics, which are like channels for sharing information.
 
 For example, one node might capture images from a camera, sending them to another node for analysis, like Holmes looking over a piece of evidence. Then, the second node might send a command to a third node, like Holmes taking action based on his findings. The nodes communicate by sending messages—one node can publish a message to a topic, or another node can subscribe to a topic to receive the information, helping to solve the task, just like Sherlock solving the case.
@@ -138,7 +139,7 @@ You'll see the new turtlesim window.
 ![turtlesim](https://github.com/user-attachments/assets/3cb5f1c4-f091-4677-9080-fde000136fe6)
 
 # *Creating a launch file*
-
+---
 
 ROS 2 Launch files allow you to start up and configure a number of executables containing ROS 2 nodes simultaneously.
 
@@ -261,6 +262,7 @@ Handy for testing and injecting data into the system.
 Try running these commands and viewing the output.
 
 ## Publisher-Subscriber Interface <a name="PubSub"></a>
+---
 
 Message passing in ROS happens with the Publisher-Subscriber Interface provided by ROS library functions.
 
@@ -387,6 +389,7 @@ Then, hit <kbd>CTRL</kbd>+<kbd>S</kbd>, to save the changes to the file.
 
 
 ### Writing a simple Subscriber Node <a name="Subscriber"></a>
+---
 
 Make the listener.py file similarly as we have done for talker.py.
 
@@ -508,6 +511,7 @@ You can see that 'I heard: "Hello World: n' is being printed. The Subscriber Nod
 Note that once you stop running the Publisher Node ( Press `Ctrl`+`C` while you're in the terminal that is running the Publisher Node), the Subscriber Node stops running as well. 
 
 ### Running the publisher and subscriber using a launch file
+---
 
 Create a file ```week0_tutorials.launch.py``` in the ```launch``` folder of ```erc_ws/src/week0_tutorials``` 
 
