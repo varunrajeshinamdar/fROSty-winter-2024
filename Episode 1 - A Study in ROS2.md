@@ -43,6 +43,8 @@ In ROS2, Python or C++ are typically used for writing the script files in the pa
 
 In the ROS ecosystem, software is organized into many packages. Unlike workflows where a developer works on just one package at a time, ROS developers often handle multiple packages simultaneously. To manage this, Colcon is used as a build tool to compile all the packages together with a single command. It's akin to Holmes managing multiple clues from different locations and tying them all together to form a cohesive solution.
 
+> **Note**: remember ` s++ `  in CS101 , colcon is also a similary build tool , but build several pacakges at once.
+
 To install and configure Colcon, run the following command:
 ```bash
 sudo apt install python3-colcon-common-extensions
