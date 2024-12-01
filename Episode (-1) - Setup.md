@@ -148,3 +148,36 @@ final usage (once the whole setup is done) :
 
 
 ---
+
+### ROS installtion in Native UBUNTU - No Docker:
+
+The above method of using using ROS is more then enough , EASY and well organizesd for the bootcamp , but if you want to delve more into robotics in future , its advisable to use ROS natively in ubuntu ,you can follow the below steps to install it :
+
+
+* __Ubuntu Installation__ :
+
+	**Dual-boot**: Follow this [Tutorial](https://www.tomshardware.com/how-to/dual-boot-linux-and-windows-11) or this [Video Tutorial](https://youtu.be/QKn5U2esuRk?si=RP5TieFTjEVU240-) to dual-boot Ubuntu with Windows. For MacOS, follow the procedure in this [video tutorial](https://youtu.be/jbUulXVZIBI?si=XTMyoI4yP6OC0Jc5) </li>
+<span style="color:red">[WARNING], Do at your own risk! We will be not responsible if you lose your data. __Follow instructions carefully and make backups before you start!__</span> <br />
+*For absolute beginners, we recommend going for any one of the this  installation , we suggest you to go with the docker part mentioned above. Dual-booting can be a little daunting. And you can always opt for dual-booting once you're comfortable with linux.* <br/>
+
+
+* __Get familiar with Linux__:
+Here are a few additional resources that you can refer to in order to get familiar with Linux:
+	* [Video-based Tutorial](https://www.youtube.com/watch?v=IVquJh3DXUA "Introduction to Linux and Basic Linux Commands for Beginners")
+	* [Text-based Tutorial](https://ryanstutorials.net/linuxtutorial/ "Linux Tutorial")
+  * [Document containing useful linux command lines](https://docs.google.com/document/d/1aroDJBIP-mqYovI8sVYYjGrn_1ugpN5NBauLLihvEjM/edit?usp=sharing)
+ 
+
+
+* __ROS Installation/setup__:
+	- For Ubuntu 22.04: [ROS2 HUMBLE](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)
+Go to a particular link and put your first step in the world of ROS.
+
+      If you don’t want to have to source the setup file every time you open a new shell, then you can add the command to your shell startup script:
+
+```bash
+echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+```
+
+
+
