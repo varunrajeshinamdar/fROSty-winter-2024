@@ -1,6 +1,6 @@
 # A fROSty-Winter-2024
 
-<img src="W0_Images/sherlock-holemes.gif">
+<img src="W0_Images/sherlock-holmes.gif">
 
 Hi! Welcome to a **fROSty Winter**.
 
