@@ -10,23 +10,9 @@ This guide provides step-by-step instructions to install Docker and run a ROS co
 
 ## Index
 - [Windows Installation](#for-windows)
-  - [Step 1: Install WSL](#step-1-install-wsl-windows-subsystem-for-linux)
-  - [Step 2: Install Docker Desktop](#step-2-install-docker-desktop)
-  - [Step 3: Running the ROS Container](#step-3-running-the-ros-container)
-  - [Step 4: Access ROS in the Browser](#step-4-access-ros-in-the-browser)
-
 - [macOS Installation](#for-macos)
-  - [Step 1: Install XQuartz](#step-1-install-xquartz)
-  - [Step 2: Install Docker Desktop](#step-2-install-docker-desktop-1)
-  - [Step 3: Running the ROS Container](#step-3-running-the-ros-container-1)
-  - [Step 4: Access ROS in the Browser](#step-4-access-ros-in-the-browser-1)
-
 - [Ubuntu Installation](#for-ubuntu)
-  - [Step 1: Download Docker Desktop](#step-1-download-docker-desktop)
-  - [Step 2: Install Docker Desktop](#step-2-install-docker-desktop-2)
-  - [Step 3: Running the ROS Container](#step-3-running-the-ros-container-2)
-  - [Step 4: Access ROS in the Browser](#step-4-access-ros-in-the-browser-2)
-
+  
 ---
 
 [Rest of the original document remains the same]
