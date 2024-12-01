@@ -180,9 +180,9 @@ Here are a few additional resources that you can refer to in order to get famili
 * __ROS Installation/setup__:
         - We will be using ROS2 Humble for the bootcamp , because its well documented and has a large coumminunity . So before you install ROS2 humble in your system , make sure you dont have any previous installs of ROS (even the faulty installs ) for that you can run the below commands.
 ```bash
-dpkg -l | grep ros-* # to check the version of ROS installed
+dpkg -l | grep ros-* 
 ```
-- if you get any output other then humble then follow the below commads to remove it
+- To check which version of ros is installed. if you get any output other then humble then follow the below commads to remove it
 ```bash
 sudo apt remove ~nros-<your-ros-version like>-*
 ```
