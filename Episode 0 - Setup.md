@@ -4,7 +4,6 @@
 This guide provides step-by-step instructions to install Docker and run a ROS container on different operating systems: **Windows**, **macOS**, and **Ubuntu**.  
 
 Final Usage (once the whole setup is done) for Docker: 
-![docker](https://github.com/user-attachments/assets/c19f3b66-9136-4280-9945-ada8ea662b58)
 <img src="misc/Untitled design.gif">
 
 ---
