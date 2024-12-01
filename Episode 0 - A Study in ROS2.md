@@ -159,7 +159,7 @@ cd launch
 touch turtlesim_mimic_launch.py
 chmod +x turtlesim_mimic_launch.py
 ```
-Open this directory with code using the following command
+Open this directory with vs code (if you want to use vs codium then instead of `code` use `codium`  using the following command
 ```bash
 code .
 ```
