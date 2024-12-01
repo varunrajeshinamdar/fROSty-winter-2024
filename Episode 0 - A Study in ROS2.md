@@ -168,7 +168,7 @@ You'll see the new turtlesim window.
 
 ![turtlesim](https://github.com/user-attachments/assets/3cb5f1c4-f091-4677-9080-fde000136fe6)
 
-## Creating a launch file
+## Learning about launch files from turtlesim mimic example
 ---
 
 ROS 2 Launch files allow you to start up and configure a number of executables containing ROS 2 nodes simultaneously.
@@ -231,19 +231,29 @@ To run the launch file created above, enter into the directory you created earli
 ```bash
 ros2 launch turtlesim_mimic_launch.py
 ```
+Now What , just two identical turtles ... hmm lets make to move 
+
 ### Publishing a message 
-To see the system in action, open a new terminal and run the ros2 topic pub command on the /turtlesim1/turtle1/cmd_vel topic to get the first turtle moving
+
+To see the system in action, open a new terminal and run the ros2 topic pub command on the /turtlesim1/turtle1/cmd_vel topic to get the first turtle moving 
+
+- the topic /turtlesim1/turtle1/cmd_vel is responsible for moving the turtle (how do i know that , from the offical documentation , dont worry if you dont understand it know , you will get it , as we go on )
 
 ```bash
-cd erc_ws
-cd src
-cd week0_tutorials
-cd launch
+cd ~
+cd erc_ws/src/week0_tutorials/launch
 ```
 
 ```bash
 ros2 topic pub -r 1 /turtlesim1/turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -1.8}}"
 ```
+Lets decode the command: 
+- `ros2 topic pub -r 1` publishes a message to the topic at rate 1Hz
+- `/turtlesim1/turtle1/cmd_vel` the topic to which the message is published
+-  `geometry_msgs/msg/Twist` the type of the message being sent
+-  `linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -1.8}}` the data that has to be published
+
+  This was a easy example of pulisher and subscriber using the builtin topics of ROS , now later in this week we will know , how to set the Publisher-Subscriber Interface from scratch.
 
 ![image](https://github.com/user-attachments/assets/537746fc-d2f7-47f4-97b7-709e3b524dfc)
 
@@ -260,7 +270,7 @@ erc_ws
                |_launch
                |_config
 ```
-Launch files in a particular package can launch nodes from other packages as well as launch files from other packages.
+*Launch files in a particular package can launch nodes from other packages as well as launch files from other packages.
 
 ```PS:``` In the turtlesim_launch we run the launch file from the same directory, if we want to run it from any directory using the generalized command, i.e.
 ```bash
