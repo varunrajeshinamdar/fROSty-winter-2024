@@ -191,10 +191,10 @@ then
 sudo apt autoremove
 ```
   
-- For Ubuntu 22.04: [ROS2 HUMBLE](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)
+- Ubuntu 22.04: [ROS2 HUMBLE](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)
 Go to a particular link and put your first step in the world of ROS.
 
-      If you don’t want to have to source the setup file every time you open a new shell, then you can add the command to your shell startup script:
+If you don’t want to have to source the setup file every time you open a new shell, then you can add the command to your shell startup script:
 
 ```bash
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
