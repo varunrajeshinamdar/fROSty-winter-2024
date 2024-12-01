@@ -141,7 +141,7 @@ You'll see the new turtlesim window.
 
 ![turtlesim](https://github.com/user-attachments/assets/3cb5f1c4-f091-4677-9080-fde000136fe6)
 
-## *Creating a launch file*
+## Creating a launch file
 ---
 
 ROS 2 Launch files allow you to start up and configure a number of executables containing ROS 2 nodes simultaneously.
