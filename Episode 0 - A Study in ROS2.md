@@ -231,7 +231,7 @@ To run the launch file created above, enter into the directory you created earli
 ```bash
 ros2 launch turtlesim_mimic_launch.py
 ```
-Now What , just two identical turtles ... hmm lets make to move 
+Now What , just two identical turtles ... hmm lets make them to move 
 
 ### Publishing a message 
 
