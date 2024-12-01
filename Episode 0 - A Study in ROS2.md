@@ -191,7 +191,7 @@ for that first lets see the "command-onology" of ROS here
 
 summing up below 
 ```bash
-ros2 run <package name> <executable node in the package> 
+ros2 run <package name> <executable node of the package> 
 ```
 
 ## Learning about launch files from turtlesim mimic example
