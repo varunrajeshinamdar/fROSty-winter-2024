@@ -33,9 +33,9 @@ Next, we shall look at packages.
 
 In the world of ROS, a package is the key to organizing your programs, much like a case file contains all the details needed for investigation. Every ROS program you write is contained within a package, which can include source code (either Python or C++), configuration files, launch files, and dependencies. The package structure is organized into directories such as:
 
--launch: Contains launch files.
--scripts: Contains source files (Python).
--package.xml: Information about the package and its dependencies.
+- launch: Contains launch files.
+- scripts: Contains source files (Python).
+- package.xml: Information about the package and its dependencies.
 
 In ROS2, Python or C++ are typically used for writing the script files in the package. If you want to move forward, understanding how to work with packages will be essential, just like Sherlock understanding the importance of each piece of evidence.
 
