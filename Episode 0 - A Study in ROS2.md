@@ -156,7 +156,7 @@ Try running these commands and viewing the output.
 
 <img src="W0_Images/mind-palace-sherlock-holmes.gif ">
 
-### Introducing TurtleSim
+## Introducing TurtleSim (hehe remember me from CS101)
 ---
 To demonstrate how to run nodes, let us run 'turtlesim_node' node from a pre-installed package, 'turtlesim':
 
