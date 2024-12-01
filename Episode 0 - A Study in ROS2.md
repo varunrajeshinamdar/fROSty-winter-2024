@@ -364,7 +364,7 @@ if __name__ == '__main__':
 
 Then, hit <kbd>CTRL</kbd>+<kbd>S</kbd>, to save the changes to the file.
 
-## Add dependencies
+### Add dependencies
 Navigate one level back to the ```erc_ws/src/week0_tutorials``` directory, where the setup.py, setup.cfg, and package.xml files have been created for you.
 
 ```bash
