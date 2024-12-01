@@ -180,7 +180,7 @@ Arrange three windows: a terminal running turtlesim_node, a terminal running tur
 
 Use the arrow keys on your keyboard to control the turtle. It will move around the screen, using its attached “pen” to draw the path it followed so far.
 
-After playing a bit with teh trutle , lets ponder whats happening ?
+After playing a bit with teh turtle , lets ponder whats happening ?
 
 for that first lets see the "command-onology" of ROS here 
 
