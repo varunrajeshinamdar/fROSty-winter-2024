@@ -371,10 +371,12 @@ if __name__ == '__main__':
     # Call the main function if this script is the main module
     main()
 ```
+again take your time , look into the code and try to understand ( you can always use the internet/chatgpt .. hehe)
 
 Then, hit <kbd>CTRL</kbd>+<kbd>S</kbd>, to save the changes to the file.
 
 ### Add dependencies
+> **quick question: what are dependencies? - dependencies are packages or libraries that a ROS package needs to compile and run. These are often declared in the package.xml file or the CMakeLists.txt file of a package
 Navigate one level back to the ```erc_ws/src/week0_tutorials``` directory, where the setup.py, setup.cfg, and package.xml files have been created for you.
 
 ```bash
