@@ -10,7 +10,7 @@ This Week will cover the core ROS 2 concepts including working with nodes, topic
 <img src="W0_Images/ros2.png " width=400 height=100>
 
 ---
-### **Basics of ROS**
+## **Basics of ROS**
 
 Before we get into the action, it’s essential to understand the basics of ROS. It’s always best to write the code yourself rather than copying and pasting, as it helps you grasp the concepts more thoroughly. Python is recommended over C++ for beginners because of its easier syntax and readability.
 
@@ -29,7 +29,7 @@ The purpose of this command line is basically to tell your terminal the location
 
 Next, we shall look at packages.
 
-#### **What is a package?** 
+### **What is a package?** 
 
 In the world of ROS, a package is the key to organizing your programs, much like a case file contains all the details needed for investigation. Every ROS program you write is contained within a package, which can include source code (either Python or C++), configuration files, launch files, and dependencies. The package structure is organized into directories such as:
 
