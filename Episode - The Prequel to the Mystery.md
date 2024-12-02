@@ -61,6 +61,8 @@ This guide provides step-by-step instructions to install Docker and run a ROS co
 4. To stop it , run `contol + C` in the terminal and to run the container again , just toggle the play button in the docker desktop , no need to folow the command line code again :))
    <img width="1372" alt="image" src="https://github.com/user-attachments/assets/e68e95d1-2dc6-4fc3-807c-c8f91ab67086">
 
+> **Note**: you have to only do this once (pasting the commad in the terminal) from the next time just toggle the play button in the containers section of docker desktop has shown in the above pic 
+
 
 ---
 
@@ -103,7 +105,7 @@ This guide provides step-by-step instructions to install Docker and run a ROS co
 4. To stop it , run `contol + C` in the terminal and to run the container again , just toggle the play button in the docker desktop , no need to folow the command line code again :))
    <img width="1372" alt="image" src="https://github.com/user-attachments/assets/e68e95d1-2dc6-4fc3-807c-c8f91ab67086">
 
-
+> **Note**: you have to only do this once (pasting the commad in the terminal) from the next time just toggle the play button in the containers section of docker desktop has shown in the above pic 
 ---
 
 ## For Ubuntu  
@@ -148,7 +150,7 @@ This guide provides step-by-step instructions to install Docker and run a ROS co
 4. To stop it , run `contol + C` in the terminal and to run the container again , just toggle the play button in the docker desktop , no need to folow the command line code again :))
    <img width="1372" alt="image" src="https://github.com/user-attachments/assets/e68e95d1-2dc6-4fc3-807c-c8f91ab67086">
 
-
+> **Note**: you have to only do this once (pasting the commad in the terminal) from the next time just toggle the play button in the containers section of docker desktop has shown in the above pic 
 ---
 
 ### ROS installtion in Native UBUNTU - No Docker (Proceed at your own risk!):
