@@ -536,6 +536,8 @@ colcon build
 ```
 
 Now source the setup files
+> **why are we doing this ??** - Sourcing of setup.bash file : ```source /install/setup.bash  ```
+The command source /install/setup.bash is used in ROS 2 to set up your environment so that your terminal can correctly locate ROS 2 packages, executables, and dependencies.Ensures your workspace and its packages are available to ROS 2 commands like ros2 run, ros2 topic, etc.
 
 ```bash
 source install/setup.bash
