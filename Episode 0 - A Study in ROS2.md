@@ -23,8 +23,9 @@ To help you a little bit more, we will also explain you some command line tools 
 
 Sections to focus in "Configuring your ROS environment":
 
-- Sourcing of setup.bash file : ```source /opt/ros/humble/setup.bash```
-The purpose of this command line is basically to tell your terminal the location of your workspace so that ROS can find its path. If we unsource the setup.bash files then the Ubuntu will not be able to locate the packages of that workspace.
+- Sourcing of setup.bash file : ```source /install/setup.bash```
+The command source /install/setup.bash is used in ROS 2 to set up your environment so that your terminal can correctly locate ROS 2 packages, executables, and dependencies.Ensures your workspace and its packages are available to ROS 2 commands like ros2 run, ros2 topic, etc.
+Dont worry if you dont get it now , you will understand , when we practically use it.
 - Its an advise to not panic if you don't grasp things in one go, try to go completely by this twice or thrice for more clarity and try to connect dots while reading the second or third time.
 
 Next, we shall look at packages.
