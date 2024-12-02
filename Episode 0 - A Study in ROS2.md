@@ -517,7 +517,7 @@ Then, hit <kbd>CTRL</kbd>+<kbd>S</kbd>, to save the changes to the file.
 You likely already have the ```rclpy``` and ```std_msgs``` packages installed as part of your ROS 2 system. It’s good practice to run rosdep in the root of your workspace (erc_ws) to check for missing dependencies before building:
 
 ```bash
-cd ~/erc_ws/src
+cd ~/erc_ws
 ```
 repeet till erc_ws directory 
 
