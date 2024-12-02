@@ -17,8 +17,8 @@ Before we get into the action, it’s essential to understand the basics of ROS.
 To get started, you'll need to create a ROS workspace and navigate the ROS filesystem. This may seem like an investigation at first, but don’t worry — just like Holmes solves complex cases step by step, you'll get there. We’ll walk you through some key tools, and the next few tutorials will focus on setting up your environment.
 
 
-To start off, these two tutorials will cover aspects such as **creating a ROS Workspace** and
-[**navigating the ROS Filesystem**](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html). 
+To start off, we will cover aspects such as **creating a ROS Workspace** and
+**navigating the ROS Filesystem**. 
 To help you a little bit more, we will also explain you some command line tools and will highlight the sections you should focus more when you open these links......
 
 Sections to focus in "Configuring your ROS environment":
