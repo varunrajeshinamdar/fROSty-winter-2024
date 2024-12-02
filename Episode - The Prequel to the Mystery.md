@@ -198,6 +198,7 @@ Here are a few additional resources that you can refer to in order to get famili
 * __ROS Installation/Setup__:
 	- Ubuntu 22.04: [ROS2 HUMBLE](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)
 Go to a particular link and put your first step in the world of ROS.
+once you have installed ROS , you have to configure it follow this link [Configure](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html)
 
 If you don’t want to have to source the setup file every time you open a new shell, then you can add the command to your shell startup script:
 
