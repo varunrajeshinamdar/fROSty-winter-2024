@@ -533,7 +533,7 @@ Do these replacements in both urdf and sdf files, crosscheck all when you are do
 
 Then run `colcon build` in the workspace.
 
-You can visit the [mrs_hudson repo](https://github.com/Mahi7828/mrshudson.git) on the ERC GitHub page.
+You can visit the [mrs_hudson repo](https://github.com/Mahi7828/mrs_hudson.git) on the ERC GitHub page.
 
 Henceforth, the **mrs_hudson** may be referred to as **bot** simply, unless specified.
 
@@ -549,13 +549,26 @@ ros2 launch mrs_hudson mrs_hudson_empty_world.launch.py
 
 ## Visualizing the bot
 
-To visualize it in **Gazebo** & **Rviz**, run the following command in a separate tab
+
+#### Installing joint_state_publisher
+```bash
+sudo apt update
+sudo apt install ros-humble-joint-state-publisher
+```
+
+### Installing robot_state_publisher
+```bash
+sudo apt update
+sudo apt install ros-humble-robot-state-publisher
+```
+
+To visualize mrs hudson in **Gazebo** & **Rviz**, run the following command in a separate tab
 
 ```
 ros2 launch mrs_hudson mrs_hudson_gazebo_rviz.launch.py
 ```
-
-Below the display Section, There is the Add button, click on it and add 'RobotModel' and 'TF' to your display. 
+You will be able to see Mrs. Hudson model on the rviz screen. 
+If there is some error related to joint and robot state publisher, then : 
 To make sure all the nodes are working properly, we will be launching the robot_state-publisher and joint_state_publisher manually in different terminals. 
 ```bash
 ros2 run robot_state_publisher robot_state_publisher /home/ubuntu/erc_ws/src/mrs_hudson/models/mrs_hudson.urdf
@@ -567,9 +580,14 @@ ros2 run joint_state_publisher joint_state_publisher --ros-args -p robot_descrip
 ```
 This will start the joint_state_pubisher. 
 
-You will be able to see mrs hudson model on the rviz screen. 
-
+Now, you will be able see Mrs. Hudson as shown below:
 <img src="W1_Images/rviz_with_model.jpg" width=800 height=600>
+
+Check the following things on your rviz:
+-If in the display section, You can't see TF and RobotModel, then , Below the display Section, There is the Add button, click on it and add 'RobotModel' and 'TF' to your display. 
+-In the fixed Frame, check if you have selected `/base_link`, as shown in previous image.
+
+
 
 ## Taking a peek at the mrs_hudson topics
 
@@ -669,7 +687,7 @@ geometry_msgs/Vector3 angular
 Once we know the features of the message we are dealing with, we can proceed with the code for moving the bot.
 
 ```bash
-ros2 run mrs_hudson vel_pub.py
+ros2 run mrs_hudson vel_pub
 ```
 
 The bot begins to move in a line. Cool!
