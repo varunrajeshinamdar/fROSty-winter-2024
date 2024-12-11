@@ -562,7 +562,7 @@ sudo apt update
 sudo apt install ros-humble-robot-state-publisher
 ```
 
-To visualize mrs hudson in **Gazebo** & **Rviz**, run the following command in a separate tab
+To visualize mrs hudson in **Gazebo** & **Rviz**, run the following command from erc_ws directory in a new terminal 
 
 ```
 ros2 launch mrs_hudson mrs_hudson_gazebo_rviz.launch.py
@@ -584,7 +584,9 @@ Now, you will be able see Mrs. Hudson as shown below:
 <img src="W1_Images/rviz_with_model.jpg" width=800 height=600>
 
 Check the following things on your rviz:
+
 -If in the display section, You can't see TF and RobotModel, then , Below the display Section, There is the Add button, click on it and add 'RobotModel' and 'TF' to your display. 
+
 -In the fixed Frame, check if you have selected `/base_link`, as shown in previous image.
 
 
