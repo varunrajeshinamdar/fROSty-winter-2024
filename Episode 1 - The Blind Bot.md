@@ -571,7 +571,7 @@ You will be able to see mrs hudson model on the rviz screen.
 
 <img src="W1_Images/rviz_with_model.jpg" width=800 height=600>
 
-## Taking a peek at the nrs_hudson topics
+## Taking a peek at the mrs_hudson topics
 
 After launching the mrs_hudson in Gazebo, execute `ros2 topic list` in another tab.
 
