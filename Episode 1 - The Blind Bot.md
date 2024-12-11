@@ -513,7 +513,7 @@ sudo apt-get install git
 Then go to the `erc_ws/src` directory and open the terminal and run
 
 ```bash
-git clone https://github.com/Mahi7828/mrshudson.git
+git clone https://github.com/erciitb/mrs_hudson.git
 ```
 
 Now before building the package with `colcon build` first we need to change the path of meshes in the urdf and sdf files.
