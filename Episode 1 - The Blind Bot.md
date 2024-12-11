@@ -617,7 +617,7 @@ The expected output is as follows
 
 <img src="W1_Images/Sherlock_moving.gif">
 
-## Moving the bot around
+## Moving the bot around in Gazebo
 
 Let's move the bot around in the standard world in Gazebo using the `mrs_hudson_teleop` script
 
@@ -695,6 +695,112 @@ ros2 run mrs_hudson vel_pub
 The bot begins to move in a line. Cool!
 
 At this point, the bot must be feeling lonely roaming all by itself. Let us bring a friend to the world. Even a high-functioning sociopath needs one :D
+
+### Moving the bot around in both rviz2 and gazebo
+In ROS 2, the odom topic is crucial for simulating bot motion in RViz2. It provides real-time data on the robot's position, orientation, and velocity relative to its starting point. This information allows RViz2 to visualize the robot's movement accurately in a simulated environment, aiding in tasks like navigation, motion planning, and debugging. Additionally, odom integrates with mapping and localization systems like SLAM, offering incremental updates that improve the realism and reliability of the simulation.
+
+So firstly, we will make the odom_tf_publisher package. 
+Open a new Terminal, go to erc_ws/src directory.
+```bash
+ros2 pkg create --build-type ament_python odom_tf_publisher
+cd odom_tf_publisher
+```
+Then we create a odom_tf_publisher.py file in the erc_ws/src/odom_tf_publisher/odom_tf_publisher folder using the below commands.
+
+```bash
+touch odom_tf_publisher.py
+chmod +x odom_tf_publisher.py
+```
+write `codium .` or `code .` in the terminal, then in odom_tf_publisher.py paste the followoing code:
+
+```bash
+import rclpy
+from rclpy.node import Node
+from nav_msgs.msg import Odometry
+from geometry_msgs.msg import TransformStamped
+from tf2_ros import TransformBroadcaster
+
+class OdomTFPublisher(Node):
+    def __init__(self):
+        super().__init__('odom_tf_publisher')
+        self.subscription = self.create_subscription(
+            Odometry,
+            '/model/mrs_hudson/odometry',  # Replace with your odometry topic
+            self.odom_callback,
+            10)
+        self.tf_broadcaster = TransformBroadcaster(self)
+
+    def odom_callback(self, msg):
+        t = TransformStamped()
+        t.header.stamp = msg.header.stamp
+        t.header.frame_id = "odom"  # Set to your odom frame
+        t.child_frame_id = "base_link"  # Set to your robot's base link
+        t.transform.translation.x = msg.pose.pose.position.x
+        t.transform.translation.y = msg.pose.pose.position.y
+        t.transform.translation.z = msg.pose.pose.position.z
+        t.transform.rotation = msg.pose.pose.orientation
+
+        self.tf_broadcaster.sendTransform(t)
+
+def main():
+    rclpy.init()
+    node = OdomTFPublisher()
+    rclpy.spin(node)
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
+
+```
+Save the code to file. Now edit the setup.py file of the package 
+```bash
+entry_points={
+    'console_scripts': [
+        'odom_tf_publisher = odom_tf_publisher.odom_tf_publisher:main',
+    ],
+},
+```
+
+Now, form the erc_ws directory,  build the package using `colcon build` and then `source ~/erc_ws/install/setup.bash  # Replace with your workspace path`
+After we have successfully build and sourced, we will run the package using the below command. 
+```bash
+ros2 run odom_tf_publisher odom_tf_publisher
+```
+You won't see any output on the terminal when its running. 
+
+##### Launch
+
+Launch the gazebo-Rviz2 launch file:
+```bash
+ros2 launch mrs_hudson mrs_hudson_gazebo_rviz.launch.py
+```
+
+Check if you have RobotModel and TF displays added to your Display section, if not then add them. We will add the Odometry from the displays add section. 
+In the topic name for odometry, click on the drop-down option it will show you you /models/mrs_hudsom/odometry , select it, press Enter. 
+If you have the RobotModel name as empty, then you have to set it as `/robot_description`.
+For the Fixed Frame at the top, type `/odom` and press enter. 
+
+Now for the movement, we will launch the teleop, 
+```bash
+ros2 run mrs_hudson mrs_hudson_teleop
+```
+Now, make sure to start the Gazebo play button, and press the respective keys in the teleop terminal, you will be able to see the motion of our bot in both Gazebo and Rviz2 at the same time. 
+Checking for nodes and topics:
+<img src="W1_Images/topicros.jpg">
+If any of the nodes is missing, it may lead to an error in executing the stimulation. 
+
+
+### tf2
+tf2 in ROS 2 is a library that manages coordinate frame transformations, helping robots understand the spatial relationships between different parts of themselves and their environment. It allows for seamless conversion of data between various coordinate frames, such as from a sensor frame to the robot's base frame, while considering both spatial and temporal aspects. tf2 organizes these frames into a tree structure, ensuring real-time updates and consistent transformations, even for moving objects or robots. It is essential for tasks like navigation, manipulation, and sensor fusion, making it a core tool for robotics applications in ROS 2.
+
+while your rviz2 and gazebo is working, To view the tree structure for your bot, you can run the following command from erc_ws directory, on successful execution, a pdf file will be generated in the erc_ws/directory. 
+```bash
+ros2 run tf2_tools view_frames
+```
+This will generate a pdf of the tree structure. Something like as shown below:
+<img src="W1_Images/frames.jpg">
+
+
 
 ## Investigation
 
@@ -962,14 +1068,7 @@ def main(args=None):
 ```
 
 
-### tf2
-tf2 in ROS 2 is a library that manages coordinate frame transformations, helping robots understand the spatial relationships between different parts of themselves and their environment. It allows for seamless conversion of data between various coordinate frames, such as from a sensor frame to the robot's base frame, while considering both spatial and temporal aspects. tf2 organizes these frames into a tree structure, ensuring real-time updates and consistent transformations, even for moving objects or robots. It is essential for tasks like navigation, manipulation, and sensor fusion, making it a core tool for robotics applications in ROS 2.
 
-while your rviz and gazebo is working, To view the tree structure for your bot, you can run the following command
-```bash
-ros2 run tf2_tools view_frames
-```
-This will generate a pdf of the tree structure, you can see it in your ubuntu folder. 
 
 ## Lidar & mrs_hudson
 
