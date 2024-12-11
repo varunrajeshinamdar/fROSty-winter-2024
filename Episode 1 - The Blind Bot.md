@@ -533,7 +533,7 @@ Do these replacements in both urdf and sdf files, crosscheck all when you are do
 
 Then run `colcon build` in the workspace.
 
-You can visit the [mrs_hudson repo](https://github.com/Mahi7828/mrs_hudson.git) on the ERC GitHub page.
+You can visit the [mrs_hudson repo](https://github.com/erciitb/mrs_hudson.git) on the ERC GitHub page.
 
 Henceforth, the **mrs_hudson** may be referred to as **bot** simply, unless specified.
 
@@ -960,6 +960,16 @@ def main(args=None):
 
         termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
 ```
+
+
+### tf2
+tf2 in ROS 2 is a library that manages coordinate frame transformations, helping robots understand the spatial relationships between different parts of themselves and their environment. It allows for seamless conversion of data between various coordinate frames, such as from a sensor frame to the robot's base frame, while considering both spatial and temporal aspects. tf2 organizes these frames into a tree structure, ensuring real-time updates and consistent transformations, even for moving objects or robots. It is essential for tasks like navigation, manipulation, and sensor fusion, making it a core tool for robotics applications in ROS 2.
+
+while your rviz and gazebo is working, To view the tree structure for your bot, you can run the following command
+```bash
+ros2 run tf2_tools view_frames
+```
+This will generate a pdf of the tree structure, you can see it in your ubuntu folder. 
 
 ## Lidar & mrs_hudson
 
