@@ -786,6 +786,8 @@ ros2 run mrs_hudson mrs_hudson_teleop
 Now, make sure to start the Gazebo play button, and press the respective keys in the teleop terminal, you will be able to see the motion of our bot in both Gazebo and Rviz2 at the same time. 
 Checking for nodes and topics:
 <img src="W1_Images/topicros.jpg">
+
+
 If any of the nodes is missing, it may lead to an error in executing the stimulation. 
 
 
@@ -799,7 +801,7 @@ ros2 run tf2_tools view_frames
 This will generate a pdf of the tree structure. Something like as shown below:
 <img src="W1_Images/frames.jpg">
 
-<img src="W1_Images/Rviz_motion.gif">
+<img src="W1_Images/Rviz2_motion.gif">
 
 ## Investigation
 
