@@ -801,7 +801,7 @@ ros2 run tf2_tools view_frames
 This will generate a pdf of the tree structure. Something like as shown below:
 <img src="W1_Images/frames.jpg">
 
-<img src="W1_Images/Rviz2_motion.gif">
+<img src="W1_Images/Rviz2_motion.gif" width=600 height=400>
 
 ## Investigation
 
