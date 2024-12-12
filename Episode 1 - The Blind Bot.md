@@ -694,7 +694,6 @@ ros2 run mrs_hudson vel_pub
 
 The bot begins to move in a line. Cool!
 
-At this point, the bot must be feeling lonely roaming all by itself. Let us bring a friend to the world. Even a high-functioning sociopath needs one :D
 
 ### Moving the bot around in both rviz2 and gazebo
 In ROS 2, the odom topic is crucial for simulating bot motion in RViz2. It provides real-time data on the robot's position, orientation, and velocity relative to its starting point. This information allows RViz2 to visualize the robot's movement accurately in a simulated environment, aiding in tasks like navigation, motion planning, and debugging. Additionally, odom integrates with mapping and localization systems like SLAM, offering incremental updates that improve the realism and reliability of the simulation.
@@ -799,6 +798,10 @@ ros2 run tf2_tools view_frames
 ```
 This will generate a pdf of the tree structure. Something like as shown below:
 <img src="W1_Images/frames.jpg">
+<video controls>
+  <source src="W1_Images/Rviz_motion.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 
 
