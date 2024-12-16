@@ -1099,5 +1099,18 @@ Additionally, one can try writing code for publishers and subscribers in differe
 
 # Let's play a game, shall we ...
 
-Coming soon :) 
+# Assignment
+
+## Steps 
+1. Create a package `assgn`. Add folders named `launch` , `config` , `meshes` and `worlds` in the package.
+2. Download the `mrs_hudson_arena.sdf` and `mrs_hudson_world.launch.py` from the assgn folder and add them to the worlds and launch folder respectively. Also think where to save the rviz configuration file. 
+3. Create a node file `96.py` in the `assgn` folder of `assgn` package, which will be responsible for obstacle avoidance and exploration of the room. The code has been given in the folder, It has some blanks which are pretty easy to be filled. Read the code properly, try to understand different functions and keywords. 
+4. Then setup the package by adding the required code lines in setup.py (check how we created packages previously). You will have to add in data_files and console scripts. 
+5. Add a `models` folder to the package and add the urdf file to it. 
+6. Create a `meshes` folder in the `assgn` package and add the three stl files from mrs_hudson package. If you have been making everything in the docker, and same workspace of erc_ws, then you don't need to change the address of file path in sdf and urdf files, but for reassurance just check the addresses once.
+   If using other linux systems, then In the sdf and urdf files of world and models folder, change the file paths of the meshes files.
+7. Launch the bot using `ros2 launch assgn mrs_hudson_world.launch.py` , run the obstacle avoidance code in another terminal using `ros2 run task_1 96` or `ros2 run task_1 96.py`. After this press the play button in Gazebo.
+8. The Bot will begin exploring the room while avoiding obstacles.
+9. There is an optional assignment for some really smart detectives: You will be able to see only the edges of the blocks which are coming in path of the bot in rviz, but how about seeign both the bot also with it? It has something to do with the fixed frame you select in rviz, So try to do a bit more research and try to stimulate it. 
+
 
