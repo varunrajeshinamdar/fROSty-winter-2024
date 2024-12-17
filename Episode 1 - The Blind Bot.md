@@ -1111,6 +1111,8 @@ Additionally, one can try writing code for publishers and subscribers in differe
    If using other linux systems, then In the sdf and urdf files of world and models folder, change the file paths of the meshes files.
 7. Launch the bot using `ros2 launch assgn mrs_hudson_world.launch.py` , run the obstacle avoidance code in another terminal using `ros2 run task_1 96` or `ros2 run task_1 96.py`. After this press the play button in Gazebo.
 8. The Bot will begin exploring the room while avoiding obstacles.
-9. There is an optional assignment for some really smart detectives: You will be able to see only the edges of the blocks which are coming in the bot's path in rviz, but how about seeing both -- The blocks and the bot? It has something to do with the fixed frame you select in rviz, So try to do a bit more research and stimulate it. 
+
+## Submission Link
+https://docs.google.com/forms/d/e/1FAIpQLSdq3Smb2bnHwrXbZoHDCp9v8nLCfkvEwhNBS3h32FNZ6D79ew/viewform?usp=dialog
 
 
