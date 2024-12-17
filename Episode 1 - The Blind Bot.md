@@ -1103,7 +1103,7 @@ Additionally, one can try writing code for publishers and subscribers in differe
 
 ## Steps 
 1. Create a package `assgn`. Add folders named `launch` , `config` , `meshes` and `worlds` in the package.
-2. Download the `mrs_hudson_arena.sdf` and `mrs_hudson_world.launch.py` from the assgn folder and add them to the worlds and launch folder respectively. Also think where to save the rviz configuration file. 
+2. Download the `mrs_hudson_arena.sdf` and `mrs_hudson_world.launch.py` from the [assgn folder](https://github.com/erciitb/fROSty-winter-2024/tree/main/assgn) folder and add them to the worlds and launch folder respectively. Also think where to save the rviz configuration file. 
 3. Create a node file `96.py` in the `assgn` folder of `assgn` package, which will be responsible for obstacle avoidance and exploration of the room. The code has been given in the folder, It has some blanks which are pretty easy to be filled. Read the code properly, try to understand different functions and keywords. 
 4. Then setup the package by adding the required code lines in setup.py (check how we created packages previously). You will have to add in data_files and console scripts. 
 5. Add a `models` folder to the package and add the urdf file to it. 
