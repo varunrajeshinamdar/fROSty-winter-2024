@@ -1093,7 +1093,7 @@ PS: See the `mrs_hudson_arena.sdf` provided for the assignment for better unders
 
 Now that you have gained the ability to write code to move the bot around and sense the surroundings, what you can do with the bot is restricted only by your imagination.
 
-Try to know more about the mrs_hudson and explore various capabilities like navigation and SLAM by refering to blogs and documentations online.
+Try to know more about the mrs_hudson and explore various capabilities like navigation and SLAM by refering to blogs and documentations online ([slam](http://erc.tech-iitb.org)).
 
 Additionally, one can try writing code for publishers and subscribers in different ways apart from the prescribed style, such as using **classes**. We shall leave that up to you for exploration. Have fun.
 
