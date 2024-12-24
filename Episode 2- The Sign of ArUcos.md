@@ -487,7 +487,6 @@ ros2 launch mrs_hudson maze_aruco.launch.py
 Upon execution, the following screen should be visible.
 
 <img src="W2_Images/WhatsApp Image 2024-12-24 at 20.05.33.jpeg" width=400 height=300>
-<img src="misc/WhatsApp Image 2024-12-24 at 18.58.48.jpeg" width=400 height=300>
 
 
 Cool !
