@@ -500,7 +500,7 @@ ArUco says hi!!
 
 ArUco will guide you along the way to solve the maze. 
 
-<img src="W2_Images/aruco_guide.jpeg" width=600 height=300>
+<img src="W2_Images/WhatsApp Image 2024-12-24 at 20.07.26.jpeg" width=600 height=300>
 
 The **Blue line** in ArUco marker in "Image Window" is indicating that magic wall 
 
