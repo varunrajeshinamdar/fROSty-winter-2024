@@ -500,8 +500,11 @@ ArUco says hi!!
 
 ArUco will guide you along the way to solve the maze. 
 
-<img src="W2_Images/WhatsApp Image 2024-12-24 at 20.12.43.jpeg" width=380 height=300>
-<img src="W2_Images/WhatsApp Image 2024-12-24 at 20.07.26.jpeg" width=380 height=300>
+<div style="display: flex; justify-content: space-around; align-items: center;">
+    <img src="W2_Images/WhatsApp Image 2024-12-24 at 20.12.43.jpeg" width="380" height="300" alt="Image 1">
+    <img src="W2_Images/WhatsApp Image 2024-12-24 at 20.07.26.jpeg" width="380" height="300" alt="Image 2">
+</div>
+
 
 The **Blue line** in ArUco marker in "Image Window" is indicating that magic wall 
 
